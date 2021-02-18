@@ -43,6 +43,7 @@ if (grade >= 80) {result = 'PASS'}
 else{
   result='FAIL'
 }
+return grade;
 console.log(`>>> You got ${grade}%, (${totalGrade} out of 5 responses correct)<<<\n>>> Status: ${result}<<<`)
 ; 
 
