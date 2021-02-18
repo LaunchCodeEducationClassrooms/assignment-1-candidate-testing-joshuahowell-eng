@@ -32,18 +32,18 @@ function gradeQuiz() {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-let correctCandidateAnswers = [];
+let totalGrade = 0;
 for (let i = 0; i < candidateAnswers.length; i++){
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
-correctCandidateAnswers.push(1);
+totalGrade++;
   }
 }
-let grade = (correctCandidateAnswers.length/questions.length*100);
+let grade = (totalGrade/questions.length*100);
 if (grade >= 80) {result = 'PASS'}
 else{
   result='FAIL'
 }
-console.log(`>>> You got ${grade}%, (${correctCandidateAnswers.length} out of 5 responses correct)<<<\n>>> Status: ${result}<<<`)
+console.log(`>>> You got ${grade}%, (${totalGrade} out of 5 responses correct)<<<\n>>> Status: ${result}<<<`)
 ; 
 
 }
@@ -53,7 +53,6 @@ function runProgram() {
   console.log(`\n\Hello ${candidateName}!\n`)
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-  console.log(candidateAnswers)
 }
 
 // Don't write any code below this line //
