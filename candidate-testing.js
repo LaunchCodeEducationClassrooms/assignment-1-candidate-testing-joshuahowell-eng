@@ -41,12 +41,14 @@ function gradeQuiz(candidateAnswers) {
   let grade = (totalGrade / questions.length * 100);
   if (grade >= 80) { result = 'PASS' }
   else {
-    result = 'FAIL'
-  }
+    result = 'FAIL'}
+
 
   console.log(`>>> You got ${grade}%, (${totalGrade} out of 5 responses correct)<<<\n>>> Status: ${result}<<<`)
     ;
-
+{
+  return grade;
+}
 }
 function runProgram() {
   askForName();
